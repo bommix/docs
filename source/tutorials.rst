@@ -329,9 +329,9 @@ Here is a linux example for ODM ::
    output_dir=/path_to_output_directories/$name
    mkdir -p $output_dir 
 
-   singularity run
-   --bind $images_dir:/$output_dir/code/images,\
-   --writable-tmpfs odm_latest.sif  \
+   singularity run \
+   --bind $images_dir:/$output_dir/code/images, \
+   --writable-tmpfs odm_latest.sif \
    --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
    --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
    --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
@@ -346,9 +346,9 @@ Here is a linux example for the ODM with GPU ::
    output_dir=/path_to_output_directories/$name
    mkdir -p $output_dir 
 
-   singularity run
-   --bind $images_dir:/$output_dir/code/images,\
-   --writable-tmpfs odm_latest.sif  \
+   singularity run \
+   --bind $images_dir:/$output_dir/code/images, \
+   --writable-tmpfs odm_latest.sif \
    --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
    --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
    --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
